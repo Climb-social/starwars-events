@@ -1,0 +1,284 @@
+$purple: #333040;
+$orange: #fbb040;
+$yellow: #ffea00;
+@font-face {
+    font-family: 'DistantGalaxy';
+    src        : url('../fonts/SFDistantGalaxy.ttf');
+}
+@font-face {
+    font-family: 'TrasandinaBlack';
+    src        : url('../fonts/TrasandinaBlack.otf');
+}
+@font-face {
+    font-family: 'TrasandinaBold';
+    src        : url('../fonts/TrasandinaBold.otf');
+}
+body {
+    margin          : 0;
+    font-family     : "DistantGalaxy", sans-serif;
+    color           : $yellow;
+    background-color: transparent;
+    height          : 100%;
+    width           : 100%;
+    background      : black;
+    text-align      : center;
+    font-size       : 4vh;
+
+    // cursor:none;
+    &:before {
+        content       : '';
+        display       : inline-block;
+        height        : 100%;
+        vertical-align: middle;
+    }
+}
+.sliderContainer {
+    position: fixed;
+    width   : 100%;
+    height  : 100%;
+    .rsArrow {
+        display: none !important;
+    }
+    .rsContent {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+    }
+    .rsSlide,
+    .royalSlider,
+    .rsOverflow {
+        background: transparent !important;
+    }
+}
+.header {
+    z-index   : 100;
+    position  : fixed;
+    top       : 5vh;
+    right     : 0;
+    left      : 0;
+    text-align: center;
+    img {
+        height: 10vh;
+    }
+}
+.footer {
+    font-family: TrasandinaBlack;
+    z-index    : 100;
+    position   : fixed;
+    bottom     : 0;
+    right      : 0;
+    left       : 0;
+    text-align : right;
+    span {
+        font-size     : 2vh;
+        vertical-align: middle;
+    }
+    img {
+        margin-top    : -0.9vh;
+        vertical-align: middle;
+        height        : 5vh;
+    }
+}
+.title {
+    img {
+        margin-bottom: 5vh;
+        height       : 40vh;
+    }
+    p {
+        margin-bottom: 0;
+        margin-top   : 2vh;
+        span {
+            color      : $yellow;
+            font-family: TrasandinaBold;
+        }
+    }
+}
+.comps,
+.winner {
+    margin-top     : 12vh;
+    justify-content: center;
+    width          : 70vw;
+    .battle {
+        margin   : 0 0 3vh;
+        color    : $yellow;
+        font-size: 3vh;
+    }
+    p {
+        line-height: 1.1;
+        span {
+            color: $yellow;
+        }
+    }
+}
+.winner {
+    .profile {
+        padding-bottom: 4vh;
+        img {
+            height       : 5vh;
+            border-radius: 3vh;
+        }
+    }
+    .entry {
+        font-size: 3.5vh;
+    }
+}
+.starwars-box {
+    border          : 5px solid #ffea00;
+    border-radius   : 10px;
+    margin          : 0;
+    padding         : 5vh;
+    font-size       : 8vh;
+    background-color: rgba(0,0,0,0.2);
+}
+.climb-feed {
+    font-family: "franklin-gothic-urw";
+    font-size  : 2.0vh;
+    line-height: 1.2;
+    margin-top : 15vh;
+    a {
+        color          : $yellow;
+        text-decoration: none;
+    }
+    .climb-social-badge {
+        display: none;
+    }
+    .climb__tile,
+    .climb__tile__content,
+    .climb-slideshow__panel {
+        border          : 5px solid #ffea00;
+        border-radius   : 10px;
+        margin          : 0;
+        padding         : 4vh;
+        background-color: rgba(0,0,0,0.2);
+    }
+    .climb-slideshow__panel {
+        min-width: 450px;
+    }
+    .climb__tile,
+    .climb-slideshow__slide--has-no-image .climb-slideshow__panel {
+        padding   : 45px;
+        max-height: 80vh;
+        overflow  : hidden;
+    }
+    .climb-slideshow__slide--has-image .climb__message {
+        font-size: 70%;
+    }
+    .climb__author {
+        font-family: 'DistantGalaxy';
+    }
+    .climb__author img {
+        margin-left: 8px;
+    }
+    .climb__tile__author__username {
+        line-height   : 38px !important;
+        text-transform: uppercase;
+    }
+    .climb__tile {
+        height: 50vh !important;
+        .climb__image {
+            border-top-left-radius : 0;
+            border-top-right-radius: 0;
+        }
+    }
+    .climb__tile__content {
+        z-index: 10;
+    }
+    .climb__message {
+
+        // margin-bottom: 30px;
+        // overflow: hidden;
+        a {
+            white-space: normal;
+            max-width  : 100%;
+        }
+    }
+    .climb-slideshow {
+        .climb__image {
+            max-height: 75vh;
+            min-height: 20vh;
+        }
+    }
+}
+.space {
+    display            : inline-block;
+    vertical-align     : middle;
+    perspective        : 5px;
+    perspective-origin : 50% 50%;
+    opacity            : 0;
+    animation          : fadeIn 3s 1 linear;
+    animation-fill-mode: forwards;
+    position           : relative;
+    .wall {
+        background     : url('../img/space2.png');
+        background-size: cover;
+    }
+    .wrap {
+        position           : absolute;
+        width              : 1000px;
+        height             : 1000px;
+        left               : -500px;
+        top                : -500px;
+        opacity            : 0;
+        transform-style    : preserve-3d;
+        animation          : move 12s infinite linear;
+        animation-fill-mode: forwards;
+    }
+    .wrap:nth-child(2) {
+        animation      : move 12s infinite linear;
+        animation-delay: 6s;
+    }
+    .wall {
+        width   : 100%;
+        height  : 100%;
+        position: absolute;
+    }
+    .wall-right {
+        transform: rotateY(90deg) translateZ(500px);
+    }
+    .wall-left {
+        transform: rotateY(-90deg) translateZ(500px);
+    }
+    .wall-top {
+        transform: rotateX(90deg) translateZ(500px);
+    }
+    .wall-bottom {
+        transform: rotateX(-90deg) translateZ(500px);
+    }
+    .wall-back {
+        transform: rotateX(180deg) translateZ(500px);
+    }
+    @keyframes move {
+        0% {
+            transform: translateZ(-500px) rotate(0deg);
+            opacity  : 0;
+        }
+        25% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateZ(500px) rotate(0deg);
+            opacity  : 0;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+.glow {
+    top             : 0;
+    bottom          : 0;
+    left            : 0;
+    right           : 0;
+    opacity         : 0.4;
+    position        : fixed;
+    background-image: url('../img/blue.png');
+    background-size : cover;
+}

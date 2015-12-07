@@ -1,6 +1,6 @@
-# unbound-event
+# starwares-event
 
-A static site for hosting the unBound / WORK.LIFE Climb.social feed.
+A static site for hosting the StarWars changed my life / WORK.LIFE Climb.social feed.
 
 ## Please see gh-pages branch for site.
 

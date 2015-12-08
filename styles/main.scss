@@ -52,7 +52,7 @@ body {
 }
 .header {
     z-index   : 100;
-    position  : fixed;
+    position  : absolute;
     top       : 5vh;
     right     : 0;
     left      : 0;
@@ -64,7 +64,7 @@ body {
 .footer {
     font-family: TrasandinaBlack;
     z-index    : 100;
-    position   : fixed;
+    position   : absolute;
     bottom     : 0;
     right      : 0;
     left       : 0;
@@ -107,6 +107,7 @@ body {
         line-height: 1.1;
         span {
             color: $yellow;
+            font-size: 120%;
         }
     }
 }
@@ -124,11 +125,15 @@ body {
 }
 .starwars-box {
     border          : 5px solid #ffea00;
-    border-radius   : 10px;
+    border-radius   : 20px;
     margin          : 0;
     padding         : 5vh;
     font-size       : 8vh;
     background-color: rgba(0,0,0,0.2);
+    .bigger {
+        color: white;
+        font-size: 120%;
+    }
 }
 .climb-feed {
     font-family: "franklin-gothic-urw";
@@ -277,7 +282,7 @@ body {
     bottom          : 0;
     left            : 0;
     right           : 0;
-    opacity         : 0.4;
+    opacity         : 0.75;
     position        : fixed;
     background-image: url('../img/blue.png');
     background-size : cover;

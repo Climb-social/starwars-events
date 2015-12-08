@@ -152,7 +152,7 @@ body {
     .climb-slideshow__panel {
         border          : 5px solid #ffea00;
         border-radius   : 10px;
-        margin          : 0;
+        margin-right    : 0;
         padding         : 4vh;
         background-color: rgba(0,0,0,0.2);
     }
@@ -167,6 +167,7 @@ body {
     }
     .climb-slideshow__slide--has-image .climb__message {
         font-size: 70%;
+        text-align: left;
     }
     .climb__author {
         font-family: 'DistantGalaxy';
@@ -201,6 +202,7 @@ body {
         .climb__image {
             max-height: 75vh;
             min-height: 20vh;
+            margin-right: 2vh;
         }
     }
 }

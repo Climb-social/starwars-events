@@ -126,7 +126,7 @@ body {
   .climb-feed .climb-slideshow__panel {
     border: 5px solid #ffea00;
     border-radius: 10px;
-    margin: 0;
+    margin-right: 0;
     padding: 4vh;
     background-color: rgba(0, 0, 0, 0.2); }
   .climb-feed .climb-slideshow__panel {
@@ -137,7 +137,8 @@ body {
     max-height: 80vh;
     overflow: hidden; }
   .climb-feed .climb-slideshow__slide--has-image .climb__message {
-    font-size: 70%; }
+    font-size: 70%;
+    text-align: left; }
   .climb-feed .climb__author {
     font-family: 'DistantGalaxy'; }
   .climb-feed .climb__author img {
@@ -157,7 +158,8 @@ body {
     max-width: 100%; }
   .climb-feed .climb-slideshow .climb__image {
     max-height: 75vh;
-    min-height: 20vh; }
+    min-height: 20vh;
+    margin-right: 2vh; }
 
 .space {
   display: inline-block;

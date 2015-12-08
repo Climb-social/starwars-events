@@ -106,7 +106,7 @@ body {
   margin: 0;
   padding: 5vh;
   font-size: 8vh;
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.5); }
   .starwars-box .bigger {
     color: white;
     font-size: 120%; }
